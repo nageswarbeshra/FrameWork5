@@ -1,0 +1,11 @@
+userName: nageswarbeshra_Gt7qQs
+accessKey: gLFfz2PvzqqeiYiQjxsj
+framework: testng
+app: bs://sample.app
+platforms:
+  - platformName: ios
+    deviceName: iPhone 15
+    platformVersion: 17
+browserstackLocal: true
+buildName: browserstack-build-1
+projectName: BrowserStack Sample
