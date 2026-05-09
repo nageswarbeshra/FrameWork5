@@ -125,14 +125,36 @@ public class BaseTest extends CommonAppiumUtils {
 
         public static String getSerialNumberViaAdb() {
             try {
-                Process process = Runtime.getRuntime().exec("adb shell getprop ro.serialno");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-                String serialNumber = reader.readLine();
+                Process process = Runtime.getRuntime().exec("adb devices");
+                BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(process.getInputStream()));
+
+                String line;
+
+                while ((line = reader.readLine()) != null) {
+
+                    // Skip header line
+                    if (line.contains("List of devices")) {
+                        continue;
+                    }
+
+                    // Find connected device
+                    if (line.trim().endsWith("device")) {
+
+                        // Extract device id
+                        String deviceId = line.split("\\s+")[0];
+                        reader.close();
+                        return deviceId;
+                    }
+                }
+
                 reader.close();
-                return serialNumber != null ? serialNumber : "";
+
             } catch (Exception e) {
-                return "";
+                e.printStackTrace();
             }
+
+            return "";
         }
     }
 }
