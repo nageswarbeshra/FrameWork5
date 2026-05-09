@@ -30,6 +30,7 @@ public class TestRunner extends BaseTest{
 
         formPage.setNameField(input.get("name"));
         formPage.setGender(input.get("gender"));
+        System.out.println("test");
         ProductCatalogue productCatalogue = formPage.pressShopButton();
         Thread.sleep(4000);
         productCatalogue.addItemsTocart(0);
