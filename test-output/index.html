@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 6 failed,   2 passed</span>
+                    <span class="method-stats">8 methods, 5 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,11 +101,6 @@
                       <a href="#" panel-name="suite-TestSuite" class="show-methods failed suite-TestSuite"> (show)</a> <!-- show-methods failed suite-TestSuite -->
                     </span>
                     <div class="method-list-content failed suite-TestSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TestSuite" title="TestRunner" class="method navigator-link" hash-for-method="MobileTest({gender=Male, name=Danish, country=Argentina})">MobileTest({gender=Male, name=Danish, country=Argentina})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-TestSuite" title="TestRunner" class="method navigator-link" hash-for-method="MobileTest({gender=Male, name=Ankit, country=Nepal})">MobileTest({gender=Male, name=Ankit, country=Nepal})</a> <!-- method navigator-link -->
@@ -142,6 +137,11 @@
                     <div class="method-list-content passed suite-TestSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="TestRunner" class="method navigator-link" hash-for-method="MobileTest({gender=Male, name=Danish, country=Argentina})">MobileTest({gender=Male, name=Danish, country=Argentina})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-TestSuite" title="TestRunner" class="method navigator-link" hash-for-method="MobileTest({gender=female, name=Payaljifhdsfhdoshfdokshfjdokhfjdsofhdoshfdshfdkjshfdokjshfdsfhjdskfdsfhdsjhfds,...)">MobileTest({gender=female, name=Payaljifhdsfhdoshfdokshfjdokhfjdsofhdoshfdshfdkjshfdokjshfdsfhjdskfdsfhdsjhfds,...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -173,26 +173,41 @@
                   <a name="MobileTest3">
                   </a> <!-- MobileTest3 -->
                   <span class="method-name">MobileTest3</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({AppiumBy.id: com.androidsample.generalstore:id/btnLetsShop})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$NhmV5R4u.click(Unknown Source)
+	at org.example.pageObjects.android.FormPage.pressShopButton(FormPage.java:68)
+	at TestRunner3.MobileTest3(TestRunner3.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1c92a549
+(tried for 1 second with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:279)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 31 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: com.androidsample.generalstore:id/btnLetsShop})
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [c9481340-92a6-4f9c-bedd-1fa5fb08fa76, findElement {value=//android.widget.Toast[@text=&quot;Please enter your name&quot;], using=xpath}]
-Capabilities {appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.androidsample.generalst..., appPackage: com.androidsample.generalstore, automationName: UiAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: emulator-5554}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: c9481340-92a6-4f9c-bedd-1fa5fb08fa76
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:140)
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
-	at TestRunner3.MobileTest3(TestRunner3.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:140)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	... 33 more
 ... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -206,11 +221,11 @@ Session ID: c9481340-92a6-4f9c-bedd-1fa5fb08fa76
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$sEe98fFh.sendKeys(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$NhmV5R4u.sendKeys(Unknown Source)
 	at org.example.pageObjects.android.FormPage.setNameField(FormPage.java:40)
 	at TestRunner3.MobileTest4(TestRunner3.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1d1cfe4
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@534762ed
 (tried for 1 second with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:279)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
@@ -250,11 +265,11 @@ Driver info: driver.version: RemoteWebDriver
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$sEe98fFh.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$NhmV5R4u.click(Unknown Source)
 	at org.example.pageObjects.android.FormPage.pressShopButton(FormPage.java:68)
 	at TestRunner3.MobileTest5(TestRunner3.java:40)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@78bad03b
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@f9a5e3f
 (tried for 1 second with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:279)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
@@ -294,11 +309,11 @@ Driver info: driver.version: RemoteWebDriver
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$sEe98fFh.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$NhmV5R4u.click(Unknown Source)
 	at org.example.pageObjects.android.FormPage.pressShopButton(FormPage.java:68)
 	at TestRunner3.MobileTest6(TestRunner3.java:51)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@7db162f2
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3b7b0b57
 (tried for 1 second with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:279)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
@@ -339,40 +354,6 @@ Driver info: driver.version: RemoteWebDriver
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="MobileTest({gender=Male, name=Danish, country=Argentina})">
-                  </a> <!-- MobileTest({gender=Male, name=Danish, country=Argentina}) -->
-                  <span class="method-name">MobileTest</span>
-                  <span class="parameters">({gender=Male, name=Danish, country=Argentina})</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: The element &apos;By.id: android:id/text1&apos; does not exist in DOM anymore
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [3de1584b-c783-4349-ba12-a6ddad8066c9, clickElement {id=00000000-0000-0025-ffff-ffff000000e5}]
-Capabilities {appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.androidsample.generalst..., appPackage: com.androidsample.generalstore, automationName: UiAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: emulator-5554}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Element: [[AndroidDriver:  on ANDROID (3de1584b-c783-4349-ba12-a6ddad8066c9)] -&gt; id: android:id/text1]
-Session ID: 3de1584b-c783-4349-ba12-a6ddad8066c9
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:78)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$9lEQtZ9q.click(Unknown Source)
-	at org.example.pageObjects.android.FormPage.setCountry(FormPage.java:61)
-	at TestRunner.MobileTest(TestRunner.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="MobileTest({gender=Male, name=Ankit, country=Nepal})">
                   </a> <!-- MobileTest({gender=Male, name=Ankit, country=Nepal}) -->
                   <span class="method-name">MobileTest</span>
@@ -382,10 +363,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [d8a18549-45e7-40e4-a329-5784f1cf7f42, clickElement {id=00000000-0000-0012-ffff-ffff00000052}]
+Command: [5f6b9fd7-01c1-487a-9444-051be34c11a3, clickElement {id=00000000-0000-011e-ffff-ffff0000035a}]
 Capabilities {appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.androidsample.generalst..., appPackage: com.androidsample.generalstore, automationName: UiAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: emulator-5554}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Element: [[AndroidDriver:  on ANDROID (d8a18549-45e7-40e4-a329-5784f1cf7f42)] -&gt; id: android:id/text1]
-Session ID: d8a18549-45e7-40e4-a329-5784f1cf7f42
+Element: [[AndroidDriver:  on ANDROID (5f6b9fd7-01c1-487a-9444-051be34c11a3)] -&gt; id: android:id/text1]
+Session ID: 5f6b9fd7-01c1-487a-9444-051be34c11a3
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -397,7 +378,7 @@ Session ID: d8a18549-45e7-40e4-a329-5784f1cf7f42
 	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:78)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$9lEQtZ9q.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$NhmV5R4u.click(Unknown Source)
 	at org.example.pageObjects.android.FormPage.setCountry(FormPage.java:61)
 	at TestRunner.MobileTest(TestRunner.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -428,6 +409,14 @@ Session ID: d8a18549-45e7-40e4-a329-5784f1cf7f42
               <span class="class-name">TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="MobileTest({gender=Male, name=Danish, country=Argentina})">
+                  </a> <!-- MobileTest({gender=Male, name=Danish, country=Argentina}) -->
+                  <span class="method-name">MobileTest</span>
+                  <span class="parameters">({gender=Male, name=Danish, country=Argentina})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="MobileTest({gender=female, name=Payaljifhdsfhdoshfdokshfjdokhfjdsofhdoshfdshfdkjshfdokjshfdsfhjdskfdsfhdsjhfds,...)">
@@ -513,40 +502,40 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'MobileTest')
 data.setCell(0, 2, 'TestRunner')
-data.setCell(0, 3, 57483);
+data.setCell(0, 3, 59512);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'MobileTest2')
-data.setCell(1, 2, 'TestRunner2')
-data.setCell(1, 3, 28127);
+data.setCell(1, 1, 'MobileTest')
+data.setCell(1, 2, 'TestRunner')
+data.setCell(1, 3, 31673);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'MobileTest6')
-data.setCell(2, 2, 'TestRunner3')
-data.setCell(2, 3, 1956);
+data.setCell(2, 1, 'MobileTest2')
+data.setCell(2, 2, 'TestRunner2')
+data.setCell(2, 3, 26879);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'MobileTest4')
+data.setCell(3, 1, 'MobileTest6')
 data.setCell(3, 2, 'TestRunner3')
-data.setCell(3, 3, 1684);
+data.setCell(3, 3, 1776);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'MobileTest5')
 data.setCell(4, 2, 'TestRunner3')
-data.setCell(4, 3, 1684);
+data.setCell(4, 3, 1727);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'MobileTest')
-data.setCell(5, 2, 'TestRunner')
-data.setCell(5, 3, 1238);
+data.setCell(5, 1, 'MobileTest4')
+data.setCell(5, 2, 'TestRunner3')
+data.setCell(5, 3, 1724);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'MobileTest')
-data.setCell(6, 2, 'TestRunner')
-data.setCell(6, 3, 1202);
+data.setCell(6, 1, 'MobileTest3')
+data.setCell(6, 2, 'TestRunner3')
+data.setCell(6, 3, 1709);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'MobileTest3')
-data.setCell(7, 2, 'TestRunner3')
-data.setCell(7, 3, 891);
+data.setCell(7, 1, 'MobileTest')
+data.setCell(7, 2, 'TestRunner')
+data.setCell(7, 3, 1268);
 window.suiteTableData['TestSuite']= { tableData: data, tableDiv: 'times-div-TestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-TestSuite">
               </div> <!-- times-div-TestSuite -->
             </div> <!-- times-div -->
@@ -579,149 +568,147 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1848 ms</span>
+                <span class="method-start">4081 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">preSetup</span>
-                <span class="method-start">7795 ms</span>
+                <span class="method-start">12468 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">MobileTest({gender=female, name=Payaljifhdsfhdoshfdokshfjdokhfjdsofhdoshfdshfdkjshfdokjshfdsfhjdskfdsfhdsjhfds,...)</span>
-                <span class="method-start">7912 ms</span>
+                <span class="method-start">12594 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">65399 ms</span>
+                <span class="method-start">72113 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">65799 ms</span>
+                <span class="method-start">72481 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">preSetup</span>
-                <span class="method-start">69280 ms</span>
+                <span class="method-start">75766 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">MobileTest({gender=Male, name=Ankit, country=Nepal})</span>
-                <span class="method-start">69362 ms</span>
+                <span class="method-start">75836 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">71120 ms</span>
+                <span class="method-start">77607 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">71486 ms</span>
+                <span class="method-start">77942 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">preSetup</span>
-                <span class="method-start">74920 ms</span>
+                <span class="method-start">81251 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">MobileTest({gender=Male, name=Danish, country=Argentina})</span>
-                <span class="method-start">74989 ms</span>
+                <span class="method-start">81355 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">76588 ms</span>
+                <span class="method-start">113031 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">stopAppiumServer</span>
-                <span class="method-start">76902 ms</span>
+                <span class="method-start">113409 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestRunner2</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">startAppiumServer</span>
-                <span class="method-start">77376 ms</span>
+                <span class="method-start">113748 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">79035 ms</span>
+                <span class="method-start">115349 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">MobileTest2</span>
-                <span class="method-start">82701 ms</span>
+                <span class="method-start">119003 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">110834 ms</span>
+                <span class="method-start">145886 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">stopAppiumServer</span>
-                <span class="method-start">111221 ms</span>
+                <span class="method-start">146276 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestRunner3</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">startAppiumServer</span>
-                <span class="method-start">111299 ms</span>
+                <span class="method-start">146311 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">112944 ms</span>
+                <span class="method-start">147947 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">MobileTest3</span>
-                <span class="method-start">116292 ms</span>
+                <span class="method-start">151381 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">117532 ms</span>
+                <span class="method-start">153443 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">118214 ms</span>
+                <span class="method-start">153800 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">MobileTest4</span>
-                <span class="method-start">121509 ms</span>
+                <span class="method-start">157186 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">123472 ms</span>
+                <span class="method-start">159202 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">124145 ms</span>
+                <span class="method-start">159572 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">MobileTest5</span>
-                <span class="method-start">127393 ms</span>
+                <span class="method-start">163479 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">129363 ms</span>
+                <span class="method-start">165495 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">129658 ms</span>
+                <span class="method-start">165896 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">MobileTest6</span>
-                <span class="method-start">132994 ms</span>
+                <span class="method-start">169401 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">135242 ms</span>
+                <span class="method-start">171463 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">stopAppiumServer</span>
-                <span class="method-start">135572 ms</span>
+                <span class="method-start">171829 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

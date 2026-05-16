@@ -9,7 +9,7 @@
       <class name="TestRunner">
         <methods>
           <include name="tearDown"/>
-          <include name="MobileTest" invocation-numbers="1 2"/>
+          <include name="MobileTest" invocation-numbers="1"/>
           <include name="setUp"/>
           <include name="preSetup"/>
           <include name="startAppiumServer"/>
